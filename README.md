@@ -16,6 +16,12 @@ The basic Functions:
 - Container(): A convenience widget that combines common painting, positioning, and sizing widgets.
 - Center(): A widget that centers its child within itself. 
 
+child: is for only one son
+child: Text('Widget Text')
+
+children is for more than one son 
+children: <Widget>[Text('Widget Text 1'), Text('Widget Text 2')]
+
 ## 2- Statelles Widget
 
 ## 3- Stateful Widget
