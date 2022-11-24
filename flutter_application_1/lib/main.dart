@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 void main(){
   runApp(
-    new MaterialApp(
-      title: "Mi Primera aplicacion",
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text("Mi Primera aplicacion")
+    MaterialApp(
+      title: "First App",
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("First App")
         ),
-        body: new Container(
-          child: new Center(
-            child: new Text("Hello World"),
+        body: Container(
+          child: const Center(
+            child: Text("Hello World"),
           ),
         ),
       ),
