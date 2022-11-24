@@ -24,6 +24,13 @@ children is for more than one son
 
 ## 2- Statelles Widget
 
+A widget that does not require mutable state.
+
+A stateless widget is a widget that describes part of the user interface by building a constellation of other widgets that describe the user interface more concretely. The building process continues recursively until the description of the user interface is fully concrete.
+
+![image](https://user-images.githubusercontent.com/93054257/203851618-2a7c8ec1-32a4-428e-990f-aec8cf2636d1.png)
+
+
 ## 3- Stateful Widget
 
 ## 4- TextField 
