@@ -33,9 +33,17 @@ A stateless widget is a widget that describes part of the user interface by buil
 
 ## 3- Stateful Widget
 
+A widget that has mutable state.
+
+State is information that (1) can be read synchronously when the widget is built and (2) might change during the lifetime of the widget. It is the responsibility of the widget implementer to ensure that the State is promptly notified when such state changes, using State.setState.
+
+- setState(): calling setState notifies the framework that the internal state of this object has changed in a way that might impact the user interface in this subtree, which causes the framework to schedule a build for this State object.
+
+- ElevatedButton(): Use elevated buttons to add dimension to otherwise mostly flat layouts, e.g. in long busy lists of content, or in wide spaces. Avoid using elevated buttons on already-elevated content such as dialogs or cards.
+
 ![image](https://user-images.githubusercontent.com/93054257/204063827-7f827161-2708-44cc-b041-cd0809650e3b.png)
 
-## 4- TextField 
+## 4- TextField
 
 ## 5- AlertDialog
 
