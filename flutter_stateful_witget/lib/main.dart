@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MaterialApp(
+  runApp(const MaterialApp(
     home: MyButton(),
   ));
 }
 
 class MyButton extends StatefulWidget {
-  @override 
-  _MyButtonState createState() => new _MyButtonState();
+  const MyButton({super.key});
+
+  @override
+  State<MyButton> createState() => _MyButtonState();
 }
 
 class _MyButtonState extends State<MyButton> {
   String flutterText = "";
   int index = 0;
   List<String> collections = ['Ignacio','Esteban','Fonts'];
+  
   void onPressButton(){
     setState(() {
       flutterText = collections[index];
@@ -22,29 +25,26 @@ class _MyButtonState extends State<MyButton> {
     });
   }
 
-  @override 
-  Widget build(BuildContext context){
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Stateful Widget"),
+  @override
+  Widget build(BuildContext context) {
+  return Scaffold(
+      appBar: AppBar(
+        title: const Text("Stateful Widget"),
         backgroundColor: Colors.orangeAccent,
       ),
-      body:  new Container(
-        child: new Center(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Text(flutterText, style: new TextStyle(fontSize: 40.0)),
-            new Padding(padding: new EdgeInsets.all(10.0)),
-            new ElevatedButton(
-              child: new Text("Actualizar", style: new TextStyle(color: Colors.white)),
-              onPressed: onPressButton, 
-            ),
-          ],
-        ),
+      body:Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(flutterText, style: const TextStyle(fontSize: 40.0)),
+          const Padding(padding: EdgeInsets.all(10.0)),
+          ElevatedButton(
+            onPressed: onPressButton,
+            child: const Text("Actualizar", style: TextStyle(color: Colors.white)), 
+          ),
+        ],
       ),
-    ),
+      ),
     );
   }
 }
-
