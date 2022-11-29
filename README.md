@@ -64,6 +64,10 @@ To control the text that is displayed in the text field, use the controller. For
   
 ## 5- AlertDialog
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/93054257/204616438-66f45b01-25c9-4e55-acea-714ada70d562.png">
+</p>
+
 ## 6- Stepper
 
 ## 7- TabBar
