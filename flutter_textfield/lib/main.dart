@@ -1,47 +1,49 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MaterialApp(
+  runApp(const MaterialApp(
     home: MyTextField(),
   ));
 }
 
 class MyTextField extends StatefulWidget {
+  const MyTextField({super.key});
+
   @override
-  _MyTextFieldState createState() => _MyTextFieldState();
+  State<MyTextField> createState() => _MyTextFieldState();
 }
 
 class _MyTextFieldState extends State<MyTextField> {
   
   String inputValue = "";
-  final TextEditingController controller = new TextEditingController();
+  final TextEditingController controller = TextEditingController();
   
   void onSubmitted(String value){
     setState(() {
-      inputValue = inputValue + "\n" + value;
+      inputValue = "$inputValue\n$value";
       controller.clear();
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title:  new Text("EditText Widget"),
-        backgroundColor: Colors.orangeAccent,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("EditText Widget",style: TextStyle(color: Colors.black),),
+        backgroundColor: Colors.limeAccent,
       ),
-      body: new Container(
+      body: Container(
         padding: const EdgeInsets.all(10.0),
-        child: new Center(
-          child: new Column(
+        child: Center(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              new TextField(
-                decoration: new InputDecoration(hintText: "Ingresar el texto aqui"),
+              TextField(
+                decoration: const InputDecoration(hintText: "Insert your Text here"),
                 onSubmitted: (String value) {onSubmitted(value);},
                 controller: controller,
               ),
-              new Text(inputValue),
+              Text(inputValue),
             ],
           ),
         ),
