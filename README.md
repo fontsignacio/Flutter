@@ -64,8 +64,12 @@ To control the text that is displayed in the text field, use the controller. For
   
 ## 5- AlertDialog
 
+An alert dialog (also known as a basic dialog) informs the user about situations that require acknowledgement. An alert dialog has an optional title and an optional list of actions. The title is displayed above the content and the actions are displayed below the content.
+
+- FloatingActionButton(): A floating action button is a circular icon button that hovers over content to promote a primary action in the application. Floating action buttons are most commonly used in the Scaffold.floatingActionButton field.  Use at most a single floating action button per screen. Floating action buttons should be used for positive actions such as "create", "share", or "navigate". If the onPressed callback is null, then the button will be disabled and will not react to touch. It is highly discouraged to disable a floating action button as there is no indication to the user that the button is disabled. Consider changing the backgroundColor if disabling the floating action button.
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/93054257/204616438-66f45b01-25c9-4e55-acea-714ada70d562.png">
+  <img src="https://user-images.githubusercontent.com/93054257/204844552-2a0ad032-b236-4fd4-b7fe-9bdecda5121e.png">
 </p>
 
 ## 6- Stepper
