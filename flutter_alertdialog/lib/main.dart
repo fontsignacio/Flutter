@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(new MaterialApp(
+  runApp(const MaterialApp(
     home: MyDialog(),
   ));
 }
 
 class MyDialog extends StatefulWidget {
+  const MyDialog({super.key});
+
   @override
-  _MyDialogState createState() => _MyDialogState();
+  State<MyDialog> createState() => _MyDialogState();
 }
 
 enum DialogAction {
@@ -19,21 +21,22 @@ enum DialogAction {
 class _MyDialogState extends State<MyDialog> {
   String _inputValue = "";
 
-  final TextStyle textStyle = new TextStyle(
+  final TextStyle textStyle = const TextStyle(
       color: Colors.black,
-      fontSize: 40.0,
+      fontSize: 25.0,
     );   
 
   void _alertResult(DialogAction action){
+    // ignore: avoid_print
     print("Tu Seleccion es $action");
   }
 
   void _showAlert (String value){
-    AlertDialog dialog = new AlertDialog(
-      content: new Text(value),
+    AlertDialog dialog = AlertDialog(
+      content: Text(value),
       actions: <Widget>[
-        new FloatingActionButton(onPressed: () { _alertResult(DialogAction.yes);}, child: new Text("Si"),),
-        new FloatingActionButton(onPressed: () {_alertResult(DialogAction.no);}, child: new Text("No"),),
+        FloatingActionButton(onPressed: () { _alertResult(DialogAction.yes);}, child: const Text("Yes"),),
+        FloatingActionButton(onPressed: () {_alertResult(DialogAction.no);}, child: const Text("No"),),
       ],
     );
     showDialog(context: context, builder: (context) => dialog);
@@ -48,28 +51,26 @@ class _MyDialogState extends State<MyDialog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        title: Text("Demo Alert Dialog"),
+      appBar: AppBar(
+        title:const  Text("AlertDialog Widget"),
         titleTextStyle: textStyle,
-        backgroundColor: Colors.yellowAccent,
+        backgroundColor: Colors.amberAccent,
         shadowColor: Colors.redAccent,
       ),
-      body: new Container(
-        child: new Center(
-          child: new Column(
-            children: <Widget> [
-              new TextField(
-                decoration: new InputDecoration(
-                  hintText: "Escribir aqui"
-                ),
-                onChanged: (String value) {_onChanged(value);},
+      body: Center(
+        child: Column(
+          children: <Widget> [
+            TextField(
+              decoration: const InputDecoration(
+                hintText: "Insert Text"
               ),
-              new ElevatedButton(
-                child: new Text("Ver Alerta"),
-                onPressed: () {_showAlert(_inputValue);},
-              )
-            ]
-          ),
+              onChanged: (String value) {_onChanged(value);},
+            ),
+            ElevatedButton(
+              child: const Text("View Alert"),
+              onPressed: () {_showAlert(_inputValue);},
+            )
+          ]
         ),
       ),
     );    
