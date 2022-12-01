@@ -24,6 +24,8 @@ children is for more than one son
   <img src=https://user-images.githubusercontent.com/93054257/203457158-6180222b-3570-4c1f-a21c-f08338b6e375.png>
 </p>
 
+- For more information about Flutter: https://api.flutter.dev/flutter/widgets/widgets-library.html
+
 ## 2- Statelles Widget
 
 A widget that does not require mutable state.
@@ -33,6 +35,8 @@ A stateless widget is a widget that describes part of the user interface by buil
 <p align="center">
   <img src=https://user-images.githubusercontent.com/93054257/203851618-2a7c8ec1-32a4-428e-990f-aec8cf2636d1.png>
 </p>
+
+- For more information about Statelles Widget: https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html
 
 ## 3- Stateful Widget
 
@@ -47,6 +51,8 @@ State is information that (1) can be read synchronously when the widget is built
 <p align="center"> 
   <img src=https://user-images.githubusercontent.com/93054257/204063827-7f827161-2708-44cc-b041-cd0809650e3b.png>
 </p>
+
+- For more information about Stateful Widget: https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html
   
 ## 4- TextField
 
@@ -61,7 +67,9 @@ To control the text that is displayed in the text field, use the controller. For
 <p align="center">
   <img src=https://user-images.githubusercontent.com/93054257/204572301-51cce844-cb4c-4eb8-9b9c-8a394bc32d40.png>
 </p>
-  
+
+- For more information about TextField: https://api.flutter.dev/flutter/material/TextField-class.html
+
 ## 5- AlertDialog
 
 An alert dialog (also known as a basic dialog) informs the user about situations that require acknowledgement. An alert dialog has an optional title and an optional list of actions. The title is displayed above the content and the actions are displayed below the content.
@@ -72,7 +80,17 @@ An alert dialog (also known as a basic dialog) informs the user about situations
   <img src="https://user-images.githubusercontent.com/93054257/204844552-2a0ad032-b236-4fd4-b7fe-9bdecda5121e.png">
 </p>
 
+- For more information about AlertDialog: https://api.flutter.dev/flutter/material/AlertDialog-class.html
+
 ## 6- Stepper
+A material stepper widget that displays progress through a sequence of steps. Steppers are particularly useful in the case of forms where one step requires the completion of another one, or where multiple steps need to be completed in order to submit the whole form.
+The widget is a flexible wrapper. A parent class should pass currentStep to this widget based on some logic triggered by the three callbacks that it provides.
+
+<p align = "center">
+  <img src="https://user-images.githubusercontent.com/93054257/205100205-98ffd87b-c3b1-4c94-9e5a-daf59198d950.png">
+</p>
+
+- For more information about Stepper: https://api.flutter.dev/flutter/material/Stepper-class.html
 
 ## 7- TabBar
 
