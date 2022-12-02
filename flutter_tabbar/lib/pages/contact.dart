@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Contact extends StatelessWidget{
+  const Contact({super.key});
+
   @override
   Widget build(BuildContext context){
-    return new Container(
-      child: new Column(
-        children: <Widget>[
-          new Icon(Icons.contacts,size: 170.0,color: Colors.amberAccent),
-          new Text("Tercer Tab"),
-        ],
-      ),
+    return  Column(
+      children: const <Widget>[
+          Icon(Icons.contacts,size: 170.0,color: Colors.amberAccent),    
+          Text("Tercer Tab"),
+      ],
     );
   }
 }

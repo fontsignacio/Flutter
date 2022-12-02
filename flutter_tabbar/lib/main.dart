@@ -4,14 +4,16 @@ import 'package:flutter_tabbar/pages/contact.dart';
 import 'package:flutter_tabbar/pages/video.dart';
 
 void main(){
-  runApp(new MaterialApp(
+  runApp(const MaterialApp(
     home: MyTabs(),
   ));
 }
 
 class MyTabs extends StatefulWidget {
+  const MyTabs({super.key});
+
   @override
- _MyTabsState createState() => new _MyTabsState();
+  State <MyTabs>createState() => _MyTabsState();
 }
 
 class _MyTabsState extends State <MyTabs> with SingleTickerProviderStateMixin {
@@ -20,35 +22,36 @@ class _MyTabsState extends State <MyTabs> with SingleTickerProviderStateMixin {
   @override
   void initState(){
     super.initState();
-    controller = new TabController(length: 3, vsync: this);
+    controller = TabController(length: 3, vsync: this);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text("Video Tabs"),
+      appBar: AppBar(
+        title: const Text("Video Tabs"),
         backgroundColor: Colors.redAccent,
-        bottom: new TabBar(
-          tabs: <Widget>[
-            new Tab(
-              icon: new Icon(Icons.home),
+        bottom: TabBar(
+          indicatorColor: Colors.lightGreen,
+          tabs: const <Widget>[
+            Tab(
+              icon: Icon(Icons.home),
             ),
-            new Tab(
-              icon: new Icon(Icons.ondemand_video),
+            Tab(
+              icon: Icon(Icons.ondemand_video),
             ),
-            new Tab(
-              icon: new Icon(Icons.contacts),
+            Tab(
+              icon: Icon(Icons.contacts),
             )
           ],
           controller: controller,
         ),
       ),
-      body: new TabBarView(
-        children: <Widget>[
-          new Home(),new Video(), new Contact()
-        ],
+      body: TabBarView(
         controller: controller,
+        children:const <Widget>[
+          Home(),Video(),Contact(),
+        ],
         ),
     );
   }
