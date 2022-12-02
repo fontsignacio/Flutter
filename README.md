@@ -93,6 +93,16 @@ The widget is a flexible wrapper. A parent class should pass currentStep to this
 - For more information about Stepper: https://api.flutter.dev/flutter/material/Stepper-class.html
 
 ## 7- TabBar
+A Material Design widget that displays a horizontal row of tabs. Typically created as the AppBar.bottom part of an AppBar and in conjunction with a TabBarView.
+
+- Tab(): A Material Design TabBar tab. If both icon and text are provided, the text is displayed below the icon.
+- TabBarView(): A page view that displays the widget which corresponds to the currently selected tab. This widget is typically used in conjunction with a TabBar.
+
+<p align = "center">
+  <img src="https://user-images.githubusercontent.com/93054257/205210213-143f3b48-7589-425e-aa61-910c1792406a.png">
+</p>
+
+- For more information about TabBar: https://api.flutter.dev/flutter/material/TabBar-class.html
 
 ## 8- Navegator Tabs
 
