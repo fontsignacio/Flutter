@@ -5,11 +5,16 @@ class Home extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-    return Column(
-      children: const <Widget>[ 
-        Icon(Icons.home,size: 170.0,color: Colors.blueAccent),
-        Text("Primer Tab"),
-      ],
-    );
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const <Widget>[         
+            Icon(Icons.home,size: 170.0,color: Colors.blueAccent),
+            Text("Primer Tab"),
+          ],
+        ),
+      ), 
+    );    
   }
 }

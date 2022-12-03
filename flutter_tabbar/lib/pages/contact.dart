@@ -5,11 +5,16 @@ class Contact extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-    return  Column(
-      children: const <Widget>[
-          Icon(Icons.contacts,size: 170.0,color: Colors.amberAccent),    
-          Text("Tercer Tab"),
-      ],
-    );
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const <Widget>[         
+            Icon(Icons.contacts,size: 170.0,color: Colors.amberAccent),    
+            Text("Tercer Tab"),
+          ],
+        ),
+      ), 
+    );    
   }
 }

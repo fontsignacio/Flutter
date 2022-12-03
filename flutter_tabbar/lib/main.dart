@@ -29,7 +29,7 @@ class _MyTabsState extends State <MyTabs> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Video Tabs"),
+        title: const Text("TabBar"),
         backgroundColor: Colors.redAccent,
         bottom: TabBar(
           indicatorColor: Colors.lightGreen,

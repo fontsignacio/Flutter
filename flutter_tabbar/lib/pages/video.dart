@@ -5,11 +5,16 @@ class Video extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-    return Column(
-      children:const <Widget>[
-        Icon(Icons.ondemand_video,size: 170.0,color: Colors.greenAccent),
-        Text("Segundo Tab"),
-      ],
-    );
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const <Widget>[         
+            Icon(Icons.ondemand_video,size: 170.0,color: Colors.greenAccent),
+            Text("Segundo Tab"),
+          ],
+        ),
+      ), 
+    );    
   }
 }
