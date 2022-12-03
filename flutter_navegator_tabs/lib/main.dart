@@ -4,14 +4,16 @@ import 'package:flutter_navegator_tabs/pages/secund.dart';
 import 'package:flutter_navegator_tabs/pages/third.dart';
 
 void main() {
-  runApp(new MaterialApp(
+  runApp(const MaterialApp(
     home: MyNavegator(),
   ));
 }
 
 class MyNavegator extends StatefulWidget {
+  const MyNavegator({super.key});
+
   @override
-  MyNavegatorState createState() => new MyNavegatorState();
+  State <MyNavegator> createState() => MyNavegatorState();
 }
 
 class  MyNavegatorState extends State <MyNavegator> with SingleTickerProviderStateMixin{
@@ -19,34 +21,35 @@ class  MyNavegatorState extends State <MyNavegator> with SingleTickerProviderSta
   @override
   void initState(){
     super.initState();
-    controller = new TabController(length: 3, vsync: this);
+    controller =  TabController(length: 3, vsync: this);
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Demo Bottom Navegation Bar"),
+    return Scaffold(
+      appBar: AppBar(
+        title: const  Text("Bottom Navegation Bar", style: TextStyle(color: Colors.black),),
+        backgroundColor: Colors.white,
       ),
-      body: new TabBarView(
-        children: <Widget>[
-          new FirstTab(), 
-          new SecundTab(),
-          new ThirdTab()],
-          controller: controller,
+      body: TabBarView(
+        controller: controller,
+        children: const <Widget>[
+          FirstTab(), 
+          SecundTab(),
+          ThirdTab() ],
       ),
-      bottomNavigationBar: new Material(
-        color: Colors.blueAccent,
-        child: new TabBar(
-          tabs: <Tab>[
-            new Tab(
-            icon: new Icon(Icons.alarm),
+      bottomNavigationBar: Material(
+        color: Colors.white,
+        child: TabBar(
+          tabs:const  <Tab>[
+          Tab(
+            icon: Icon(Icons.alarm, color: Colors.black),
           ),
-          new Tab(
-            icon: new Icon(Icons.watch_later),
+          Tab(
+            icon: Icon(Icons.watch_later, color: Colors.black),
           ),
-          new Tab(
-            icon: new Icon(Icons.airplanemode_active),
+          Tab(
+            icon: Icon(Icons.airplanemode_active, color: Colors.black),
           ),          
           ],
           controller: controller,
