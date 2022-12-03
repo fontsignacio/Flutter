@@ -19,7 +19,7 @@ class _MyStepperState extends State<MyStepper> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Text ("Steper"),
+        title:const Text ("Stepper"),
         backgroundColor: Colors.blueGrey,
       ),
       body: Stepper(
