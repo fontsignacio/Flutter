@@ -87,7 +87,7 @@ A material stepper widget that displays progress through a sequence of steps. St
 The widget is a flexible wrapper. A parent class should pass currentStep to this widget based on some logic triggered by the three callbacks that it provides.
 
 <p align = "center">
-  <img src="https://user-images.githubusercontent.com/93054257/205100205-98ffd87b-c3b1-4c94-9e5a-daf59198d950.png">
+  <img src="https://user-images.githubusercontent.com/93054257/205456910-1c5ea82a-96ec-4db1-8c12-f9867e5d3a8f.png">
 </p>
 
 - For more information about Stepper: https://api.flutter.dev/flutter/material/Stepper-class.html
@@ -99,16 +99,25 @@ A Material Design widget that displays a horizontal row of tabs. Typically creat
 - TabBarView(): A page view that displays the widget which corresponds to the currently selected tab. This widget is typically used in conjunction with a TabBar.
 
 <p align = "center">
-  <img src="https://user-images.githubusercontent.com/93054257/205210213-143f3b48-7589-425e-aa61-910c1792406a.png">
+  <img src="https://user-images.githubusercontent.com/93054257/205457178-061545a1-8a6d-44e8-9957-a14f76255404.png">
 </p>
 
 - For more information about TabBar: https://api.flutter.dev/flutter/material/TabBar-class.html
 
-## 8- Navegator Tabs
+## 8- Navigator Tabs
+This is the same that TabBar, but the Tab is down now. This is possible for BottonNavigationBar class. 
 
-## 9- Navegator Router
+- BottonNavigationBar: A material widget that's displayed at the bottom of an app for selecting among a small number of views, typically between three and five. The bottom navigation bar consists of multiple items in the form of text labels, icons, or both, laid out on top of a piece of material. It provides quick navigation between the top-level views of an app. For larger screens, side navigation may be a better fit. A bottom navigation bar is usually used in conjunction with a Scaffold, where it is provided as the Scaffold.bottomNavigationBar argument.
 
-## 10- Navegator Drawer
+<p align = "center">
+  <img src="https://user-images.githubusercontent.com/93054257/205457273-3dc30656-5257-4592-b298-56ef4ab1cf40.png">
+</p>
+
+- For more information about BottomNavigationBar: https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html
+
+## 9- Navigator Router
+
+## 10- Navigator Drawer
 
 ## 11- SnackBar
 
