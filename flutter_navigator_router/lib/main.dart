@@ -1,41 +1,45 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(new MaterialApp(
-    home: new First(),
+  runApp(const MaterialApp(
+    home: First(),
   ));  
 }
 
 class First extends StatelessWidget {
+  const First({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text("Primera Pantalla Screen"),
+      appBar: AppBar(
+        title: const Text("First Display Screen"),
       ),
-      body: new Center(
-        child: new ElevatedButton(onPressed: () {
+      body: Center(
+        child: ElevatedButton(onPressed: () {
           Navigator.push(context,
-          new MaterialPageRoute(builder: (context) => new Second()));  
+          MaterialPageRoute(builder: (context) => const Second()));  
         },
-        child: new Text("Mostar Pantalla")),
+        child:const  Text("View Display")),
       ),
     );
   }
 }
 
 class Second extends StatelessWidget {
+  const Second({super.key});
+
   @override
   Widget build(BuildContext context) {
   return Scaffold(
-      appBar: new AppBar(
-        title: new Text("Segunda Pantalla Screen"),
+      appBar: AppBar(
+        title: const Text("Second Display Screen"),
       ),
-      body: new Center(
-        child: new ElevatedButton(onPressed: () {
+      body: Center(
+        child: ElevatedButton(onPressed: () {
           Navigator.pop(context); 
         },
-        child: new Text("Volver")),
+        child: const Text("Back")),
       ),
     );
   }
