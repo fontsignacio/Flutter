@@ -116,6 +116,19 @@ This is the same that TabBar, but the Tab is down now. This is possible for Bott
 - For more information about BottomNavigationBar: https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html
 
 ## 9- Navigator Router
+In the Navigate to a new screen and back recipe, you learned how to navigate to a new screen by creating a new route and pushing it to the Navigator.
+However, if you need to navigate to the same screen in many parts of your app, this approach can result in code duplication. The solution is to define a named route, and use the named route for navigation.
+To work with named routes, use the Navigator.pushNamed() function. This example replicates the functionality from the original recipe, demonstrating how to use named routes using the following steps:
+
+- Create two screens.
+- Define the routes.
+- Navigate to the second screen using Navigator.pushNamed().
+- Return to the first screen using Navigator.pop()
+
+![image](https://user-images.githubusercontent.com/93054257/205471343-06bf2223-6744-484d-950f-5e25557bd269.png)
+![image](https://user-images.githubusercontent.com/93054257/205471374-906a526c-ff07-4220-bd47-6d43f26cab47.png)
+
+- For more information about Navigate with named routes: https://docs.flutter.dev/cookbook/navigation/named-routes
 
 ## 10- Navigator Drawer
 
