@@ -131,6 +131,17 @@ To work with named routes, use the Navigator.pushNamed() function. This example 
 - For more information about Navigate with named routes: https://docs.flutter.dev/cookbook/navigation/named-routes
 
 ## 10- Navigator Drawer
+In apps that use Material Design, there are two primary options for navigation: tabs and drawers. When there is insufficient space to support tabs, drawers provide a handy alternative. In Flutter, use the Drawer widget in combination with a Scaffold to create a layout with a Material Design drawer. This recipe uses the following steps:
+
+- Create a Scaffold.
+- Add a drawer.
+- Populate the drawer with items.
+- Close the drawer programmatically.
+
+![image](https://user-images.githubusercontent.com/93054257/205542662-224b9464-65b1-4967-ba3d-4cf84a3e2953.png)
+![image](https://user-images.githubusercontent.com/93054257/205542986-5e0f6f56-57ff-4a52-9a83-74cefeeba173.png)
+
+- For more information about Navigate with Drawers: https://docs.flutter.dev/cookbook/design/drawer
 
 ## 11- SnackBar
 
