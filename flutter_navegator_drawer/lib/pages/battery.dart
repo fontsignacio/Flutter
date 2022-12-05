@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
 class Battery extends StatelessWidget {
-static const String routeName = "/bateria";
+static const String routeName = "/battery";
+
+  const Battery({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Configuracion") ,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Settings"),
+        backgroundColor: Colors.lightGreen,
       ),
-      body: new Container(
-        child: new Center(
-          child: new Text("Pantalla de Bateria"),
-        ),
+      body: const Center(
+        child: Text("Battery Screen"),
       ),
     );
   }

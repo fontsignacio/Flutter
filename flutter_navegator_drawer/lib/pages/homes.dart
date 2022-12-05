@@ -1,32 +1,36 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(new MaterialApp(
+  runApp(const MaterialApp(
     home: Home(),
   ));
 }
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
-  _HomeState createState() => _HomeState();
+  State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
   Drawer _getDrawer(BuildContext context){
 
-    var header = new DrawerHeader(child: new Text("Ajustes"));
-    var info = new AboutListTile(
-      child: new Text("Informacion App"),
-      applicationName: "Demo de un Drawer",
-      applicationIcon: new Icon(Icons.favorite),
+    var header = const DrawerHeader(child: Text("Settings"));
+    var info = const AboutListTile(
+      // ignore: sort_child_properties_last
+      child: Text("Information App"),
+      applicationName: "Demo Drawer",
+      applicationIcon: Icon(Icons.favorite),
       applicationVersion: "v1.0.0",
-      icon: new Icon(Icons.info),
+      icon: Icon(Icons.info),
     );
 
+    // ignore: no_leading_underscores_for_local_identifiers
     ListTile _getItem(Icon icon, String description, String route){
-      return new ListTile(
+      return ListTile(
         leading: icon,
-        title: new Text(description),
+        title: Text(description),
         onTap: (() {
           setState(() {
             Navigator.of(context).pushNamed(route);
@@ -34,25 +38,26 @@ class _HomeState extends State<Home> {
         }),
       ); 
     }
-    ListView listView = new ListView(children: <Widget>[
+    ListView listView = ListView(children: <Widget>[
       header,
-      _getItem(new Icon(Icons.settings), "Configuracion","/configuracion"),
-      _getItem(new Icon(Icons.home), "Pagina Principal","/"),
-      _getItem(new Icon(Icons.battery_charging_full), "Bateria","/bateria"),
+      _getItem(const Icon(Icons.settings), "Setting","/setting"),
+      _getItem(const Icon(Icons.home), "Homepage","/"),
+      _getItem(const Icon(Icons.battery_charging_full), "Battery","/battery"),
       info
     ],
       
     );
 
-    return new Drawer(
+    return Drawer(
       child: listView,
     );
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text("Demo Menu"),
+      appBar: AppBar(
+        title: const Text("Demo Menu"),
+        backgroundColor: Colors.lightGreen,
       ),
       drawer: _getDrawer(context,)
     );

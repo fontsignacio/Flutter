@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
 class Settings extends StatelessWidget {
-  static const String routeName = "/configuracion";
+  static const String routeName = "/setting";
+
+  const Settings({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Configuracion") ,
+    return Scaffold(
+      appBar: AppBar(
+        title:const Text("Settings"),
+        backgroundColor: Colors.lightGreen,
       ),
-      body: new Container(
-        child: new Center(
-          child: new Text("Pantalla Configuracion"),
-        ),
+      body:const Center(
+        child: Text("Setting Screen"),
       ),
     );
   }
