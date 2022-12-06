@@ -1,49 +1,62 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(new MaterialApp(
+  runApp(const MaterialApp(
     home: MySnackBar(),
   ));
 }
 
 class MySnackBar extends StatefulWidget {
+  const MySnackBar({super.key});
+
   @override
-  _MySnackBarState createState() => _MySnackBarState();
+  State<MySnackBar> createState() => _MySnackBarState();
 }
 
 class _MySnackBarState extends State<MySnackBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text("SnackBar Demo"),
+      appBar: AppBar(
+        title: const Text("SnackBar Demo"),
+        backgroundColor: Colors.indigoAccent,
       ),
-      body: new Center(
-        child: new MyButton(),
+      body: const Center(
+        child: MyButton(),
       ),
     );
   }
 }
 
 class MyButton extends StatelessWidget {
+  const MyButton({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton(
-      child: new Text("Desplegar SnackBar"),
+    return ElevatedButton(
+      // ignore: sort_child_properties_last
+      child:const  Text("Open Up SnackBar"),
       onPressed: () {
-        ScaffoldMessenger.of(context).showSnackBar(new SnackBar(
-          content: new Text("Hola Soy un SnackBar"),
-          duration: new Duration(seconds: 5),
-          action: new SnackBarAction(
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: const Text("Hi!! I am a SnackBar"),
+          backgroundColor: Colors.indigoAccent,
+          duration: const Duration(seconds: 5),
+          action: SnackBarAction(
             label: "Click",
+            textColor: Colors.white,
             onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(new SnackBar(
-              content: new Text("Otros contenidos de Usuario"),
-              duration: new Duration(seconds: 5)),
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              content: Text("Others Users Information"),
+              backgroundColor: Colors.indigoAccent,
+              duration: Duration(seconds: 5)),
             );}),
           )
         );
       },
+      style: ElevatedButton.styleFrom(
+      foregroundColor: Colors.white, 
+      backgroundColor: Colors.redAccent,
+  ),
     );
   }
 }
