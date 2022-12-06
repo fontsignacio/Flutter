@@ -144,6 +144,17 @@ In apps that use Material Design, there are two primary options for navigation: 
 - For more information about Navigate with Drawers: https://docs.flutter.dev/cookbook/design/drawer
 
 ## 11- SnackBar
+It can be useful to briefly inform your users when certain actions take place. For example, when a user swipes away a message in a list, you might want to inform them that the message has been deleted. You might even want to give them an option to undo the action. In Material Design, this is the job of a SnackBar. This recipe implements a snackbar using the following steps:
+
+- Create a Scaffold.
+- Display a SnackBar.
+- Provide an optional action.
+
+<p align = "center">
+  <img src="https://user-images.githubusercontent.com/93054257/205807085-0b515c05-a419-4874-b00a-f643a5af053d.png">
+</p>
+
+- For more information about Snackbar: https://docs.flutter.dev/cookbook/design/snackbars
 
 ## 12- ListViews 
 
