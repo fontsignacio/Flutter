@@ -157,5 +157,22 @@ It can be useful to briefly inform your users when certain actions take place. F
 - For more information about Snackbar: https://docs.flutter.dev/cookbook/design/snackbars
 
 ## 12- ListViews 
+A scrollable list of widgets arranged linearly. ListView is the most commonly used scrolling widget. It displays its children one after another in the scroll direction. 
+  
+There are four options for constructing a ListView:
+
+- The default constructor takes an explicit List<Widget> of children. This constructor is appropriate for list views with a small number of children because constructing the List requires doing work for every child that could possibly be displayed in the list view instead of just those children that are actually visible.
+
+- The ListView.builder constructor takes an IndexedWidgetBuilder, which builds the children on demand. This constructor is appropriate for list views with a large (or infinite) number of children because the builder is called only for those children that are actually visible.
+
+- The ListView.separated constructor takes two IndexedWidgetBuilders: itemBuilder builds child items on demand, and separatorBuilder similarly builds separator children which appear in between the child items. This constructor is appropriate for list views with a fixed number of children.
+
+- The ListView.custom constructor takes a SliverChildDelegate, which provides the ability to customize additional aspects of the child model. For example, a SliverChildDelegate can control the algorithm used to estimate the size of children that are not actually visible.
+
+ <p align = "center">
+  <img src="https://user-images.githubusercontent.com/93054257/206076302-73547192-95fe-44a7-b43f-e150ae807851.png">
+</p>
+ 
+- For more information about ListView: https://api.flutter.dev/flutter/widgets/ListView-class.html
 
 ## 13- Infinit ListView 
