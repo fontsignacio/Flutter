@@ -5,9 +5,11 @@ void main(){
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: const Text("Contactos"),
+        title: const Text("Contacts"),
+        backgroundColor: Colors.black,
       ),
       body:  const Contact(),
+      backgroundColor: Colors.black,
     ),
   ));
 }

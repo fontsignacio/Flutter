@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_new
+// ignore_for_file: unnecessary_new, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_listiview/model/ContactModel.dart';
@@ -10,7 +10,7 @@ class ContactItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new ListTile(
-      leading: new CircleAvatar(child: new Text(_contact.name[0]),),
+      leading: new CircleAvatar(child: new Text(_contact.name[0])),
       title: new Text(_contact.name),
       subtitle: new Text(_contact.email),
     );
