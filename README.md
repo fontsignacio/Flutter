@@ -175,4 +175,5 @@ There are four options for constructing a ListView:
  
 - For more information about ListView: https://api.flutter.dev/flutter/widgets/ListView-class.html
 
-## 13- Infinit ListView 
+## 13- Infinit ListView
+ListView with items that can be scrolled infinitely in both directions. Replace your existing ListView with InfiniteListView. Builder pattern must be used because of its infinite nature. This is possible thanks to add dependens like a generator word randoms. 
