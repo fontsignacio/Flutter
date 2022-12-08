@@ -177,3 +177,10 @@ There are four options for constructing a ListView:
 
 ## 13- Infinit ListView
 ListView with items that can be scrolled infinitely in both directions. Replace your existing ListView with InfiniteListView. Builder pattern must be used because of its infinite nature. This is possible thanks to add dependens like a generator word randoms. 
+
+- dependencies: english_words: ^4.0.0  
+- main(): import 'package:english_words/english_words.dart';
+
+![image](https://user-images.githubusercontent.com/93054257/206584941-9fa76819-5d36-4457-a46c-72a87e12718b.png)
+![image](https://user-images.githubusercontent.com/93054257/206584946-aab7f943-044f-41d4-9210-36b7dfb717cc.png)
+
