@@ -21,9 +21,10 @@ class _MyListState extends State<MyList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Lista Infinita"),
+        title: const Text("Infinit ListView",),
+        backgroundColor: Colors.red,
         centerTitle: true,
-        actions: <Widget>[IconButton(onPressed: _pushSaved, icon: const Icon(Icons.list))],
+        actions: <Widget>[IconButton(onPressed: _pushSaved, icon: const Icon(Icons.list,))],
       ),
       body: _buildSuggestions(),
     );
@@ -43,7 +44,8 @@ void _pushSaved(){
       ).toList();
       return Scaffold(
         appBar: AppBar(
-          title: const Text("Guardadas"),
+          title: const Text("Favorites"),
+          backgroundColor: Colors.red,
         ),
         body: ListView(children: divided),
       );

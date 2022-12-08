@@ -8,8 +8,7 @@ void main(){
         title: const Text("Contacts"),
         backgroundColor: Colors.black,
       ),
-      body:  const Contact(),
-      backgroundColor: Colors.black,
+      body:  const Contact(),      
     ),
   ));
 }
